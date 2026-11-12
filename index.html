@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A neutral Legal English study brief on the death penalty in the United States: the law, arguments for and against, evidence, and an alternative.">
-  <meta name="theme-color" content="#F5F1E9">
+  <meta name="theme-color" content="#F0EAE0">
   <title>The Death Penalty in the United States — A Legal English Study Brief</title>
   <style>
     :root {
@@ -101,11 +101,46 @@
     .closing { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid var(--ink); padding-block: 20px 30px; }
     .closing p { font-size: .76rem; color: var(--muted); }
     .closing a { min-height: 44px; display: inline-flex; align-items: center; font-size: .83rem; white-space: nowrap; }
+    /* Solemn capital-punishment editorial treatment: shadowed chamber,
+       oxblood details, warm paper and an original execution-chair drawing. */
+    :root { --paper:#F0EAE0; --ink:#242321; --accent:#863A3E; --muted:#625C55; --rule:#C8BDB0; --heading:Georgia,'Times New Roman',serif; --body:'Avenir Next',Avenir,'Segoe UI',Arial,sans-serif; }
+    body { background:var(--paper); }
+    .masthead { border-bottom-color:#8C8177; }
+    .guide { padding-top:4px; }
+    .guide-title { color:#863A3E; }
+    .guide a { transition:color .18s ease; }
+    .chapter:not(.hero) { position:relative; }
+    .chapter:not(.hero)::before { content:""; position:absolute; left:-12px; top:46px; width:2px; height:24px; background:#863A3E; opacity:.66; }
+    .hero { position:relative; isolation:isolate; overflow:hidden; margin:0 0 15px; padding:45px 43px 39px; color:#F2ECE2; background:#211F20; border:1px solid #413638; border-bottom:3px solid #863A3E; }
+    .hero::after { content:""; position:absolute; z-index:-1; right:0; top:0; bottom:0; width:47%; opacity:1; pointer-events:none; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 430' fill='none'%3E%3Cpath d='M235 28v48M112 28h204M112 28v374M316 28v374M112 402h204' stroke='%23B98873' stroke-opacity='.48' stroke-width='2'/%3E%3Cpath d='M173 85h81v25h-81zM181 110v96h65v-96M157 206h113v18H157zM169 224v60h89v-60M157 284h113v17H157zM175 301v60M252 301v60M162 361h103M213 110v96M178 145h69M178 172h69' stroke='%23D5C6B5' stroke-opacity='.72' stroke-width='3' stroke-linecap='square'/%3E%3Cpath d='M194 76v9M234 76v9M181 123l65 65M246 123l-65 65M139 207v77M285 207v77M139 217h18M270 217h15M169 379h89' stroke='%23A95553' stroke-opacity='.8' stroke-width='2'/%3E%3Ccircle cx='214' cy='52' r='18' stroke='%23B98873' stroke-opacity='.66' stroke-width='2'/%3E%3Cpath d='M214 33v38M195 52h38' stroke='%23B98873' stroke-opacity='.44' stroke-width='1'/%3E%3C/svg%3E") center right/contain no-repeat; }
+    .hero > * { position:relative; z-index:1; }
+    .hero .eyebrow, .hero .subtitle { color:#D39881; }
+    .hero .eyebrow .number { border-right-color:#725B55; }
+    .hero h1 { max-width:12ch; }
+    .hero h2 { max-width:24ch; color:#F2ECE2; }
+    .hero .intro { max-width:46ch; }
+    .hero .framing { max-width:48ch; color:#C9BDB2; }
+    .hero .cite { color:#E4AF99; }
+    .hero .cite:hover { color:#211F20; background:#E4AF99; }
+    .hero details { max-width:54ch; border-top-color:#594B48; }
+    .hero summary { color:#E4AF99; }
+    .hero .evidence .locator, .hero .evidence .limit { color:#C9BDB2; }
+    .chapter:not(.hero) details { border-top-color:#B9AA9B; }
+    .chapter:not(.hero) summary { color:#79383B; }
+    .argument-type, .study-date { color:#863A3E; }
+    .evidence blockquote { border-left:2px solid #A95553; padding-left:17px; }
+    .chapter.conclusion { border-bottom-color:#863A3E; }
+    .sources { position:relative; padding-top:47px; }
+    .sources h2 { padding-bottom:12px; border-bottom:2px solid #863A3E; }
+    .source-id { font-variant-numeric:tabular-nums; }
+    .closing { border-top-color:#863A3E; }
     @media (max-width: 930px) {
       .wrap { padding-inline: 28px; }
       .layout { grid-template-columns: 150px minmax(0, 1fr); column-gap: 35px; }
       .law-lines li { grid-template-columns: 110px minmax(0, 1fr); gap: 20px; }
       .arguments { gap: 24px; }
+      .hero { padding:34px 29px 31px; }
+      .hero::after { width:42%; opacity:.68; }
     }
     @media (max-width: 720px) {
       .wrap { padding-inline: 23px; }
@@ -125,6 +160,8 @@
       .chapter:not(.hero) { padding-top: 31px; }
       .subtitle { font-size: 1.38rem; margin-block: 17px 24px; }
       .hero h2 { font-size: 1.5rem; }
+      .hero h1, .hero h2, .hero .intro, .hero .framing { max-width:100%; }
+      .hero::after { top:10px; bottom:auto; right:12px; width:30%; height:100px; opacity:.18; }
       .arguments { grid-template-columns: 1fr; gap: 22px; }
       .arguments > div + div { border-top: 1px solid var(--rule); padding-top: 20px; }
       .law-lines li { grid-template-columns: 1fr; gap: 3px; }
@@ -175,6 +212,10 @@
       p, li, blockquote { orphans: 3; widows: 3; }
       .source-list li { break-inside: avoid; }
       .closing { padding-block: 4mm; }
+      .hero { color:#202A33; background:#FFFFFF !important; border:1px solid #666; border-bottom:2px solid #863A3E; }
+      .hero::after { display:none; }
+      .hero .eyebrow, .hero .subtitle, .hero h2, .hero .cite, .hero summary { color:#202A33; }
+      .hero .framing, .hero .evidence .locator, .hero .evidence .limit { color:#202A33; }
     }
   
     [hidden] { display: none !important; }
